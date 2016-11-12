@@ -10,6 +10,8 @@ var passport = require('passport');
 
 mongoose.connect('mongodb://localhost/hairdressed');             
 
+
+require('./models/user');
 var auth = require('./routes/auth/register');
 
 var app = express();
@@ -27,6 +29,8 @@ app.use(bodyParser.json());
 
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 app.use('/auth', auth);

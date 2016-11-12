@@ -22,10 +22,14 @@ app.config(function($routeProvider){
 app.controller('registerCtrl', function($scope, $http){
 	$scope.register = function(user){
 		$http.post('/auth/register', user).success(function(data){
-			alert('success')
-		}).error(function(error){
-			alert('error')
-		})
+			if(data.state === 'success'){
+				console.log(data)
+			}
+			if(data.state === 'error'){
+				console.log(data)
+			}
+			
+		});
 	}
 })
 
