@@ -1,7 +1,7 @@
 <form>
 	<h1>Zarejestruj:</h1>
 	<h2>Imię:</h2>
-	<input type="text" placeholder="Jan">
+	<input ng-model="user.name" type="text" placeholder="Jan">
 	<h2>Nazwisko:</h2>
 	<input type="text" placeholder="Nowak">
 	<h2>E-mail:</h2>
@@ -13,5 +13,7 @@
 	<h2>Wybierz rolę:</h2>
 	<input type="radio" name="role" value="user">Użytkownik
 	<input type="radio" name="role" value="haidresser">Fryzjer
-	<input type="submit" value="Rejestruj">
+	<h2>Regulamin</h2>
+	<input type="checkbox">
+	<input ng-click="register(user)" type="submit" value="Rejestruj">
 </form>

@@ -19,8 +19,14 @@ app.config(function($routeProvider){
 })
 
 
-app.controller('registerCtrl', function($scope){
-	$scope.user = 'main'
+app.controller('registerCtrl', function($scope, $http){
+	$scope.register = function(user){
+		$http.post('/auth/register', user).success(function(data){
+			alert('success')
+		}).error(function(error){
+			alert('error')
+		})
+	}
 })
 
 app.controller('loginCtrl', function($scope){
