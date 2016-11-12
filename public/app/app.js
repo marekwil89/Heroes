@@ -4,7 +4,7 @@ var app = angular.module("app", ['ngRoute'])
 app.config(function($routeProvider){
 
 	$routeProvider.when('/register', {
-		templateUrl: 'app/components//auth/register.html',
+		templateUrl: 'app/components/auth/register.html',
 		controller: 'registerCtrl'
 	});
 
