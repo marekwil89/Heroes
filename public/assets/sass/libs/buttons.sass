@@ -1,0 +1,52 @@
+.btn
+  z-index: 99
+  margin: 15px auto
+  width: 200px
+  padding: 10px
+  background: none
+  transition: 0.3s all
+  display: block
+  box-sizing: border-box
+  text-align: center
+  text-decoration: none
+  font-weight: 700
+  
+  &.btn-small
+    font-size: $font-small    
+
+  &.btn-medium
+    font-size: $font-medium
+
+  &.btn-main
+    color: $main-color
+    border: $main-color 3px solid
+
+    &:hover
+      cursor: pointer
+      background: $main-color
+      color: $white-color
+      box-shadow: 8px 6px 5px 0px rgba(50, 50, 50, 0.75)
+
+  &.btn-dark
+    color: $dark-gray
+    border: $dark-gray 3px solid
+
+    &:hover
+      cursor: pointer
+      background: $dark-gray
+      color: $white-color
+      box-shadow: 8px 6px 5px 0px rgba(50, 50, 50, 0.75)
+
+  &.btn-light
+    color: $light-gray
+    border: $light-gray 3px solid
+
+    &:hover
+      cursor: pointer
+      background: $light-gray
+      color: $dark-gray
+      box-shadow: 8px 6px 5px 0px rgba(50, 50, 50, 0.75)
+
+@media screen and (max-width: 400px)
+  .btn
+    width: 90%

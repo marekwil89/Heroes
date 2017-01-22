@@ -2,19 +2,49 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Famous Haidresser</title>
+	<title>Heroes</title>
+	<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body ng-app="app">
 
-	<a href="#/register">Rejestracja</a>
-	<a href="#/login">Logowanie</a>
-
-	<main ng-view></main>
-
+	<navigation class="navigation"></navigation>
+	<ui-view></ui-view>
+	<footer class="footer"></footer>
+	
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/angular/angular.min.js"></script>
-	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="bower_components/angular-rateit/dist/ng-rateit.min.js"></script>
+	<script src="bower_components/angular-typewrite/dist/angular-typewrite.js"></script>
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkMb1wxiN14JOIehgx685On8bNTPTFVl0&libraries=places"></script>
 	<script src="app/app.js"></script>
+	<script src="app/routes.js"></script>
+	<script src="app/run.js"></script>
+	<script src="app/components/auth/worker/registerWorkerCtrl.js"></script>
+	<script src="app/components/auth/worker/loginWorkerCtrl.js"></script>
+	<script src="app/components/auth/user/registerUserCtrl.js"></script>
+	<script src="app/components/auth/user/loginUserCtrl.js"></script>
+	<script src="app/components/workers/list/workersListCtrl.js"></script>
+	<script src="app/components/workers/detail/workersDetailCtrl.js"></script>
+	<script src="app/components/workers/profile/workersProfileCtrl.js"></script>
+	<script src="app/components/main/mainPageCtrl.js"></script>
+	<script src="app/shared/navigation/navigationCtrl.js"></script>
+	<script src="app/shared/navigation/navigationDire.js"></script>
+	<script src="app/shared/footer/footerDire.js"></script>
+	
+	<script src="app/services/workersServ.js"></script>
+	<script src="app/services/globalServ.js"></script>
+	<script src="app/services/mapServ.js"></script>
+	<script src="app/services/authServ.js"></script>
+	<script src="app/services/mainPageServ.js"></script>
 
-
+	<script src="assets/js/move.js"></script>
+	<script src="assets/js/heroSlider.js"></script>
+	<script src="assets/js/quotesSlider.js"></script>
+	<script src="assets/js/count.js"></script>
 </body>
 </html>

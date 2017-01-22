@@ -1,0 +1,18 @@
+<i ng-click="toggleNav = !toggleNav" class="fa fa-4x fa-bars" aria-hidden="true"></i>
+
+<nav ng-class="{'opened': toggleNav}">
+
+	<h1 class="logo">Heroes</h1>
+
+	<ul class="main-menu">
+		<li><a ui-sref="main-page"><i class="fa fa-home" aria-hidden="true"></i> Main</a></li>
+		<li><a ui-sref="workers-list"><i class="fa fa-th-list" aria-hidden="true"></i> Show Heroes</a></li>
+		<li ng-if="current_user && current_user.type === 'worker'"><a ui-sref="workers-profile({ workerId: current_user._id })"><i class="fa fa-user" aria-hidden="true"></i> My Profile</a></li>
+		<li ng-if="!current_user"><a ui-sref="register-worker">Register Hero</a></li>
+		<li ng-if="!current_user"><a ui-sref="login-worker">Log Hero</a></li>
+		<li ng-if="!current_user"><a ui-sref="register-user">Register User</a></li>
+		<li ng-if="!current_user"><a ui-sref="login-user">log User</a></li>
+		<li ng-if="current_user"><a href="" ng-click="logOut()"><i class="fa fa-sign-out" aria-hidden="true"></i> Wyloguj</a></li>
+		
+	</ul>
+</nav>

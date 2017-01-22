@@ -1,0 +1,47 @@
+.fa-bars
+  width: 300px
+  z-index: 9999
+  position: fixed
+  text-align: center
+  top: 30px
+  color: $main-color
+
+
+  &:hover
+    cursor: pointer
+
+nav
+  transition: 0.3s all
+  background: $white-color
+  border-right: 1px solid $main-color
+  width: 300px
+  min-height: 100vh
+  color: $light-gray
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  position: fixed
+  z-index: 1024
+  top: 0px
+  left: -3000px
+
+  &.opened
+    left: 0px
+
+  .logo
+    font-size: $font-huge
+
+  .main-menu
+    li
+      text-decoration: none
+      display: block
+      position: relative
+      padding: 0
+      margin: 5px 0px
+
+      a
+        display: block
+        color: $dark-gray
+        text-decoration: none
+        font-size: $font-small

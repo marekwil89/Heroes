@@ -1,0 +1,19 @@
+<section class="auth-box bg-auth-worker">
+    <form ng-submit="loginWorker(worker)" class="auth-form">
+        <h2>Login Hero</h2>
+        <fieldset>
+            <legend>Email:</legend>
+            <input ng-model="worker.email" class="auth-input" name="email" type="text" placeholder="example@mail.com">
+        </fieldset>
+        <fieldset>
+            <legend>Password:</legend>
+            <input ng-model="worker.password" class="auth-input" name="password" type="password" placeholder="your secret password">
+        </fieldset>
+        <ul class="errors">
+            <li ng-repeat="error in response">{{error.msg}}</li>
+        </ul>
+        <fieldset>
+            <input class="btn btn-small btn-main" type="submit" value="login">
+        </fieldset>
+    </form>   
+</section>

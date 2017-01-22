@@ -1,0 +1,25 @@
+<header class="profile-edit-header">
+  <h2>Edit {{worker.name}}</h2>
+</header>
+
+<section class="profile-edit-box">
+  <form ng-submit="editProfile(worker)">
+    <fieldset>
+      <legend>Name:</legend>
+      <input ng-model="worker.name" class="" name="email" type="text" placeholder="example@mail.com">
+    </fieldset>
+    <fieldset>
+      <legend>Description</legend>
+      <textarea ng-model="worker.descr" name="description" type="text" placeholder="your text"></textarea>
+    </fieldset>
+    <fieldset>
+      <legend>Adress:</legend>
+      <input ng-model="worker.adress" name="adress" type="text" placeholder="Your address">
+    </fieldset>
+    <ul class="errors">
+      <li ng-repeat="error in response">{{error.msg}}</li>
+    </ul>
+    <input class="btn btn-small btn-main" type="submit" value="Edit">
+    <a ui-sref="workers-profile({ workerId: current_user._id })" class="btn btn-small btn-dark" type="button" >Back</a>  
+  </form>
+</section>

@@ -1,0 +1,51 @@
+<header class="workers-detail-header">
+	<h2>{{worker.name}}</h2>
+	<ng-rate-it ng-model="worker.average" read-only="true"></ng-rate-it>
+	<p class="opinion-length">{{worker.opinions.length}} opinions</p>	
+</header>
+
+<section class="workers-detail-section">
+		
+	<h3>Description</h3>
+	<div class="hr"></div>
+	<p class="description">{{worker.descr}}</p>		
+
+	<h3>Adress</h3>
+	<div class="hr"></div>
+	<address>{{worker.adress}}</address>
+	<div id="map"></div>
+	
+</section>
+
+<section class="workers-opinions-section">
+
+	<h3>Opinions</h3>
+	<div class="hr"></div>
+	<ul class="opinions">
+		<li ng-repeat="opinion in worker.opinions" class="opinion">
+			<h4>{{opinion.author.email}} on <time>{{opinion.created_at | date: 'short'}}</time></h4>
+			<p>{{opinion.text}}</p>
+			<ng-rate-it ng-model="opinion.rate" read-only="true"></ng-rate-it>
+		</li>
+	</ul>
+
+	<form ng-submit="addOpinion(opinion)" class="opinion-form">
+		<h3>New opinion</h3>
+		<div class="hr"></div>
+		<textarea ng-model="opinion.text" type="text" placeholder="Your opinion"></textarea>
+		<ng-rate-it ng-model="opinion.rate" resetable="false"></ng-rate-it>
+
+    <ul class="errors">
+        <li ng-repeat="error in response">{{error.msg}}</li>
+    </ul>
+		<input class="btn btn-small btn-dark" type="submit" value="Add Opinion">
+	</form>
+</section>
+
+
+
+
+
+ 
+
+

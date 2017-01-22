@@ -1,0 +1,80 @@
+<header class="main-page-header bg-image0">
+	<h1 class="main-text">You need 
+		<span typewrite="" type-delay="100" initial-delay="1.5s" blink-delay="1s" text="['a Batman ?', 'a Spider-man ?', 'a Super-man ?', 'or Iron-man ?', 'a Super hero ?']"></span>
+	</h1>
+  <a type="button" class="btn btn-medium btn-main"  ui-sref="workers-list">Start</a>
+</header>
+
+<section class="steps-section">
+  <h2>Its only 3 steps to rent a hero</h2>
+  <div class="steps">
+    <div class="line-behind"></div>
+    <div class="step-box" href="#">
+      <h3>1. Register</h3>
+      <p>Register a new user via the registration form</p>
+      <a class="btn btn-small btn-light" ui-sref="register-user">More</a>
+    </div>
+    <div class="step-box" href="#">
+      <h3>2. Choose</h3>
+      <p>Select a character from the list. You can choose it in terms of place of residence or other</p>
+      <a class="btn btn-small btn-light" ui-sref="workers-list">More</a>
+    </div>
+    <div class="step-box" href="#">
+      <h3>3. Rate</h3>
+      <p>After the action, add a comment and rate our hero</p>
+      <a class="btn btn-small btn-light" ui-sref="workers-list">More</a>
+    </div>
+  </div>
+</section>
+
+<section class="quotes-section">
+  <div class="slides">
+    <div ng-repeat="quote in quotes" class="quote">
+      <div class="bubble">
+        <blockquote>
+          <p class="quote-text"><span>"</span>{{quote.text}}<span>"</span></p>
+          <small class="quote-author">- {{quote.author}}</small>
+        </blockquote>   
+      </div>
+    </div>    
+  </div>
+</section>
+
+<section class="workers-section">
+  <h2 ng-if="workersBest.opinions.length > 0">Best average</h2>
+  <div ng-if="workersBest.opinions.length > 0" class="workers">
+    <a class="worker-box" ui-sref="workers-detail({ workerId: workersBest._id })">
+      <i class="fa fa-5x fa-certificate" aria-hidden="true"></i>
+      <h3>{{workersBest.name}}</h3>
+      <address>{{workersBest.adress}}</address>
+      <div class="line"></div>
+      <ng-rate-it class="rate" ng-model="workersBest.average" read-only="true"></ng-rate-it>
+      <p class="opinion-length">{{workersBest.opinions.length}} Opinions</p> 
+    </a>
+  </div>
+  <h2>Latest Heroes</h2>
+  <div class="workers">
+    <a ng-repeat="worker in workersLatest" class="worker-box" ui-sref="workers-detail({ workerId: worker._id })">
+      <h3>{{worker.name}}</h3>
+      <address>{{worker.adress}}</address>
+      <div class="line"></div>
+      <ng-rate-it class="rate" ng-model="worker.average" read-only="true"></ng-rate-it>
+      <p class="opinion-length">{{worker.opinions.length}} Opinions</p> 
+    </a>
+  </div>
+</section>
+
+<section class="app-section">
+  <aside class="app-box">
+    <h2>Hero app</h2>
+    <div class="hr"></div>
+    <p>This application track down the nearest hero and show how much arrives Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aspernatur recusandae, accusantium saepe iure placeat dolor minus at dolores, voluptatem aperiam, beatae ab ipsum obcaecati repudiandae laudantium asperiores amet dolorem.</p>
+    <button class="btn btn-medium btn-light">Download</button>
+  </aside>
+  <div class="phone-image rotate">
+    <h2>Hero app</h2>
+    <div class="hr"></div>
+    <p>Your hero will arrive at:</p>
+    <time class="count">5</time>
+  </div>
+</section>

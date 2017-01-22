@@ -13,6 +13,11 @@
   ],
   "dependencies": {
     "angular": "^1.5.8",
-    "angular-route": "^1.5.8"
+    "angular-ui-router": "^0.3.2",
+    "angular-resource": "^1.5.8",
+    "angular-rateit": "^3.0.2",
+    "angular-typewrite": "^0.0.15",
+    "jquery": "^3.1.1",
+    "components-font-awesome": "^4.7.0"
   }
 }
