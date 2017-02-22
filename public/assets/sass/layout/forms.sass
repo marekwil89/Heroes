@@ -1,0 +1,49 @@
+
+
+.form-section
+  margin: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  min-height: 85vh
+
+  form
+    width: 600px
+
+    fieldset
+      width: 100%
+      margin: 20px 0
+
+      legend
+        margin-bottom: 10px
+        text-transform: uppercase
+
+    p
+      font-size: 1.2rem
+      font-weight: 300
+
+
+    .register-btn
+      font-weight: 700
+      display: block
+      padding: 10px 0
+      font-size: 1.2rem
+      transition: 0.3s all
+  
+      &:hover
+        color: $main-color
+
+input, textarea
+  width: 100%
+  padding: 15px
+  border: 1px solid $dark-white
+
+  &:focus
+    outline: 0
+
+@media (max-width: 620px)
+  .form-section
+    form
+      width: 100%
+      padding: 20px

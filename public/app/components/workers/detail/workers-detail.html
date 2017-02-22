@@ -1,44 +1,51 @@
-<header class="workers-detail-header">
-	<h2>{{worker.name}}</h2>
-	<ng-rate-it ng-model="worker.average" read-only="true"></ng-rate-it>
+<header class="info-header">
+	<h2 class="title-medium">{{worker.name}}</h2>
+	<ng-rate-it ng-model="worker.average" read-only="true" star-width="40" star-height="40"></ng-rate-it>
 	<p class="opinion-length">{{worker.opinions.length}} opinions</p>	
 </header>
 
-<section class="workers-detail-section">
+<section class="worker-detail-section">
 		
-	<h3>Description</h3>
-	<div class="hr"></div>
+	<h3 class="title-small">Description</h3>
+	<div class="line"></div>
 	<p class="description">{{worker.descr}}</p>		
 
-	<h3>Adress</h3>
-	<div class="hr"></div>
+	<h3 class="title-small">Adress</h3>
+	<div class="line"></div>
 	<address>{{worker.adress}}</address>
 	<div id="map"></div>
 	
 </section>
 
-<section class="workers-opinions-section">
+<section class="worker-opinions-section">
 
-	<h3>Opinions</h3>
-	<div class="hr"></div>
-	<ul class="opinions">
-		<li ng-repeat="opinion in worker.opinions" class="opinion">
-			<h4>{{opinion.author.email}} on <time>{{opinion.created_at | date: 'short'}}</time></h4>
+
+
+	<ul ng-if="worker.opinions.length > 0" class="opinions">
+		<h3 class="title-small">Opinions</h3>
+		<div class="line"></div>
+		<li ng-repeat="opinion in worker.opinions">
+			<h4>by <strong>{{opinion.author.email}}</strong> on <time>{{opinion.created_at | date: 'short'}}</time></h4>
 			<p>{{opinion.text}}</p>
 			<ng-rate-it ng-model="opinion.rate" read-only="true"></ng-rate-it>
 		</li>
 	</ul>
 
-	<form ng-submit="addOpinion(opinion)" class="opinion-form">
-		<h3>New opinion</h3>
-		<div class="hr"></div>
-		<textarea ng-model="opinion.text" type="text" placeholder="Your opinion"></textarea>
-		<ng-rate-it ng-model="opinion.rate" resetable="false"></ng-rate-it>
+	<form ng-submit="addOpinion(opinion)">
+		<h3 class="title-small">New opinion</h3>
+		<div class="line"></div>
+		<fieldset>
+			<textarea ng-model="opinion.text" type="text" placeholder="Your opinion"></textarea>
+		</fieldset>
+		
+		<ng-rate-it star-width="20" star-height="20" ng-model="opinion.rate" resetable="false"></ng-rate-it>
 
     <ul class="errors">
         <li ng-repeat="error in response">{{error.msg}}</li>
     </ul>
-		<input class="btn btn-small btn-dark" type="submit" value="Add Opinion">
+
+    <input value="Send" type="submit" class="btn btn-main btn-long"/>
+
 	</form>
 </section>
 

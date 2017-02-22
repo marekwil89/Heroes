@@ -1,4 +1,4 @@
-angular.module("registerWorkerModule", []).controller('registerWorkerCtrl', function($scope, $http, register, global, $rootScope){
+angular.module("registerWorkerModule", []).controller('registerWorkerCtrl', function($scope, $http, register, global, $rootScope, $location){
 
 	$scope.worker = {
 		name: 'Batman',

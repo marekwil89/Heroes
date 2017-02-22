@@ -1,4 +1,4 @@
-angular.module("registerUserModule", []).controller('registerUserCtrl', function($scope, $http, register, global, $rootScope){
+angular.module("registerUserModule", []).controller('registerUserCtrl', function($scope, $http, register, global, $rootScope, $location){
 	$scope.registerUser = function(user){
 		register.user(user).then(function(response){
 			$rootScope.isAlreadyLoged()

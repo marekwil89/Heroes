@@ -1,19 +1,15 @@
-angular.module("routesModule", ['ui.router']).config(function($stateProvider){
+angular.module("routesModule", ['ui.router']).config(function($stateProvider, $urlRouterProvider){
+	
+	$urlRouterProvider.otherwise('/')
+
 	$stateProvider
 
 	.state({
 	    name: 'main-page',
-	    url: '',
+	    url: '/',
 	    templateUrl: 'app/components/main/main-page.html',
 	    controller: 'mainPageCtrl'
  	})
-
-	// .state({
-	//     name: 'main-page',
-	//     url: '/main-page',
-	//     templateUrl: 'app/components/main/main-page.html',
-	//     controller: 'mainPageCtrl'
- // 	})
 
 	.state({
 	    name: 'register-worker',
@@ -52,25 +48,23 @@ angular.module("routesModule", ['ui.router']).config(function($stateProvider){
 
 	.state({
 	    name: 'workers-detail',
-	    url: 'workers-list/{workerId}',
+	    url: '/workers-list/{workerId}',
 	    templateUrl: 'app/components/workers/detail/workers-detail.html',
 	    controller: 'workersDetailCtrl'
  	})
 
 	.state({
 	    name: 'workers-profile',
-	    url: 'workers/profile/{workerId}',
+	    url: '/workers/profile/{workerId}',
 	    templateUrl: 'app/components/workers/profile/workers-profile.html',
 	    controller: 'workersProfileCtrl'
  	})
 
  	.state({
 	    name: 'workers-profile-edit',
-	    url: 'workers/profile/{workerId}/edit',
+	    url: '/workers/profile/{workerId}/edit',
 	    templateUrl: 'app/components/workers/profile/workers-profile-edit.html',
 	    controller: 'workersProfileCtrl'
  	})
-
-	.state("otherwise", { url : ''})
 
 })

@@ -1,0 +1,87 @@
+.btn
+  font-weight: 700
+  display: block
+  position: relative
+  overflow: hidden
+  transition: 0.3s all
+  letter-spacing: 2px
+  text-transform: uppercase
+  cursor: pointer
+  outline: 0
+  border: none
+  text-align: center
+  padding: 19px
+
+  .front
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    transition: 0.3s all
+    
+  .back
+    position: absolute
+    left: -50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    transition: 0.3s all
+
+  &.btn-normal
+    width: 200px
+    height: 50px
+    font-size: 1.3rem
+    margin: 25px 0
+
+  &.btn-small
+    width: 100px
+    height: 25px
+    font-size: 0.75rem
+
+  &.btn-long
+    margin: 25px 0 10px 0
+    width: 100%
+    font-size: 1rem
+
+  &.btn-main
+    background-color: $main-color
+    color: $white
+
+  &.btn-center
+    margin: 50px auto
+
+    &:hover
+      background: $black
+
+      .front
+        position: absolute
+        left: 150%
+        top: 50%
+        transform: translate(-50%, -50%)
+      .back
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+
+  &.btn-invert
+    background-color: $black
+    color: $white
+
+    &:hover
+      background-color: $main-color
+      .front
+        position: absolute
+        left: 150%
+        top: 50%
+        transform: translate(-50%, -50%)
+      .back
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+
+
+
+
+    
+   

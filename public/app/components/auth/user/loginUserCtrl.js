@@ -7,7 +7,18 @@ angular.module("loginUserModule", []).controller('loginUserCtrl', function($scop
 			}
 			else{
 				$scope.response = response.data
+				console.log(response)
 			}			
 		})
 	}
+
+	$scope.inputError = function(name){
+		console.log(name)
+		// for(var i = 0; i < response.data.length; i++){
+		// 	// if(response.data[i].param == "")
+		// }
+		
+		// return 'input-error'
+	}
+
 })

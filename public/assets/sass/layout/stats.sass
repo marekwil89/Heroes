@@ -1,0 +1,79 @@
+.stats-section
+  min-height: 80vh
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+  .stats-box
+    display: flex
+    width: 1240px
+
+    .stat
+      width: 25%
+      padding: 50px
+      text-align: center
+      border-right: 1px solid $dark-white
+
+      &:last-child
+        border-right: none
+
+      span
+        font-size: 7rem
+
+      p
+        font-size: 1.7rem
+
+  .stats-info
+    width: 800px
+    margin: 100px auto
+
+    p
+      font-size: 2rem
+      text-align: center
+
+@media (max-width: 1260px)
+  .stats-section
+    .stats-box
+      width: 100%
+      padding: 20px
+      .stat
+        span
+          font-size: 5rem
+
+        &:nth-child(2)
+          border-right: none
+
+        p
+          font-size: 1.2rem
+
+    .stats-info
+      p
+        font-size: 1.4rem
+
+@media (max-width: 820px)
+  .stats-section
+    .stats-box
+      flex-wrap: wrap
+      .stat
+        width: 50%
+
+        span
+          font-size: 3rem
+
+    .stats-info
+      width: 100%
+      padding: 20px
+
+@media (max-width: 500px)
+  .stats-section
+    .stats-box
+      padding: 0 20px
+      margin: 0
+      .stat
+        padding: 20px
+        width: 100%
+        border-right: none
+
+    .stats-info
+      margin: 25px 0

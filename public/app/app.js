@@ -13,10 +13,10 @@ angular.module("app", [
 	'globalServ',
 	'mapServ',
 	'ngRateIt',
-	'navigationModule',
 	'navigationDire',
 	'footerDire',
 	'mainPageModule',
-	'mainPageServ',
-	'angularTypewrite'
+	'typewriteDire',
+	'statCountDire',
+	'quotesDire'
 ]);

@@ -1,18 +1,23 @@
-<header class="workers-profile-header">
-  <h2>{{worker.name}}</h2>
-  <ng-rate-it ng-model="worker.average" read-only="true"></ng-rate-it>
+
+<header class="info-header">
+  <h2 class="title-medium">{{worker.name}}</h2>
+  <ng-rate-it ng-model="worker.average" read-only="true" star-width="40" star-height="40"></ng-rate-it>
   <p class="opinion-length">{{worker.opinions.length}} opinions</p> 
 </header>
 
-<section class="workers-profile-section">
-  <h3>Description</h3>
-  <div class="hr"></div>
-  <p class="description">{{worker.descr}}</p>
-  <h3>Created at</h3>
-  <div class="hr"></div>
+<section class="worker-detail-section">
+    
+  <h3 class="title-small">Description</h3>
+  <div class="line"></div>
+  <p class="description">{{worker.descr}}</p>   
+  <h3 class="title-small">Created at</h3>
+  <div class="line"></div>
   <time>{{worker.created_at | date: 'short'}}</time>
-  <h3>Adress</h3>
-  <div class="hr"></div>
+  <h3 class="title-small">Adress</h3>
+  <div class="line"></div>
   <address>{{worker.adress}}</address>
-  <a class="btn btn-small btn-dark" ui-sref="workers-profile-edit({ workerId: current_user._id })">Edit profile</a>
+  <a ui-sref="workers-profile-edit({ workerId: current_user._id })" class="btn btn-normal btn-main">
+    <span class="front">Edit</span>
+    <span class="back">Profile</span>
+  </a>
 </section>

@@ -3,22 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Heroes</title>
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="bower_components/angular-rateit/dist/ng-rateit.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body ng-app="app">
 
-	<navigation class="navigation"></navigation>
+	<navigation></navigation>
 	<ui-view></ui-view>
-	<footer class="footer"></footer>
+	<foot></foot>
 	
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="bower_components/angular-rateit/dist/ng-rateit.min.js"></script>
-	<script src="bower_components/angular-typewrite/dist/angular-typewrite.js"></script>
 	
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkMb1wxiN14JOIehgx685On8bNTPTFVl0&libraries=places"></script>
 	<script src="app/app.js"></script>
@@ -32,19 +32,16 @@
 	<script src="app/components/workers/detail/workersDetailCtrl.js"></script>
 	<script src="app/components/workers/profile/workersProfileCtrl.js"></script>
 	<script src="app/components/main/mainPageCtrl.js"></script>
-	<script src="app/shared/navigation/navigationCtrl.js"></script>
-	<script src="app/shared/navigation/navigationDire.js"></script>
-	<script src="app/shared/footer/footerDire.js"></script>
 	
 	<script src="app/services/workersServ.js"></script>
 	<script src="app/services/globalServ.js"></script>
 	<script src="app/services/mapServ.js"></script>
 	<script src="app/services/authServ.js"></script>
-	<script src="app/services/mainPageServ.js"></script>
 
-	<script src="assets/js/move.js"></script>
-	<script src="assets/js/heroSlider.js"></script>
-	<script src="assets/js/quotesSlider.js"></script>
-	<script src="assets/js/count.js"></script>
+	<script src="app/directives/typewrite/typewriteDire.js"></script>
+	<script src="app/directives/startCount/statCountDire.js"></script>
+	<script src="app/directives/quotes/quotesDire.js"></script>
+	<script src="app/directives/navigation/navigationDire.js"></script>
+	<script src="app/directives/footer/footerDire.js"></script>
 </body>
 </html>

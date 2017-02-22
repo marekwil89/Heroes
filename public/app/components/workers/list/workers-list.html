@@ -1,18 +1,19 @@
-<header class="workers-list-header">
-
-  <h2 class="list-text">Heroes
-    <span typewrite="" type-delay="100" initial-delay="1.5s" blink-delay="1s" text="['to take', 'to rent', 'to meet', 'of our cities']"></span>
-  </h2>
-
-  <input class="search-input" type="text" ng-model="searchText" placeholder="search...">
+<header class="info-header">
+  <h2 class="title-medium">list</h2>
 </header>
 
 <section class="workers-list-section">
-  <a ng-repeat="worker in workersList | filter: searchText" class="worker-box" ui-sref="workers-detail({ workerId: worker._id })">
-    <h3>{{worker.name}}</h3>
-    <address>{{worker.adress}}</address>
-    <div class="line"></div>
-    <ng-rate-it class="rate" ng-model="worker.average" read-only="true"></ng-rate-it>
-    <p class="opinion-length">{{worker.opinions.length}} Opinions</p> 
-  </a>
+
+  <div class="workers-box">
+
+    <a ng-class="{'your-profile': worker._id == current_user._id}" ng-repeat="worker in workersList" class="worker config-img geometric-img" ui-sref="workers-detail({ workerId: worker._id })">
+      <h3>{{worker.name}}</h3>
+      <address>{{worker.adress}}</address>
+      <div class="line"></div>
+      
+      <p class="opinion-length">{{worker.opinions.length}} Opinions</p>
+      <ng-rate-it class="rate" ng-model="worker.average" read-only="true" star-width="30" star-height="30"></ng-rate-it>
+    </a>
+  </div>
+
 </section>

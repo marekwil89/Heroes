@@ -20,11 +20,17 @@ module.exports = {
 	},
 
 	isAlreadyName: function(req, res, next){
+		if(req.user){
+			if(req.user._id == req.body._id){
+				return next()
+			}
+		}
+
 		Worker.findOne({ 'name' :  req.body.name }, function(err, worker) {
 			var errors = [];
 			if(worker){
 				errors[0] = {
-					msg: 'This Hero name is already exist2'
+					msg: 'This Hero name is already exist*'
 				};
 				return res.send(errors)					
 			}	

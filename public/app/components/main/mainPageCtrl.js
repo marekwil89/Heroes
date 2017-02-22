@@ -1,6 +1,4 @@
-angular.module("mainPageModule", []).controller('mainPageCtrl', function($scope, workers, hero){
-  $scope.quotes = hero.quotes
-
+angular.module("mainPageModule", []).controller('mainPageCtrl', function($scope, workers){
 	workers.latest().then(function(response){
 		$scope.workersLatest = response.data
 	})

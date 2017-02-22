@@ -1,0 +1,65 @@
+.main-page-header
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  position: relative
+  min-height: 100vh
+
+  .main-box
+    width: 1200px
+    z-index: 50
+    
+    .main-title
+      font-size: 6rem
+      color: $white
+
+      .blink
+        animation: blink 1s infinite
+
+    .main-text
+      width: 550px
+      font-size: 1.7rem
+      color: $white
+
+@media (max-width: 1220px)
+  .main-page-header
+    padding: 20px
+    .main-box
+      width: 100%
+      .main-title
+        font-size: 4rem
+      .main-text
+        font-size: 1.2rem
+
+@media (max-width: 800px)
+  .main-page-header
+    .main-box
+      .main-title
+        font-size: 3rem
+        min-height: 120px
+        .blink
+          display: none
+      .main-text
+        width: 100%
+        font-size: 1.4
+
+@media (max-width: 400px)
+  .main-page-header
+    .main-box
+      .main-title
+        font-size: 2.5rem
+        min-height: 100px
+
+.info-header
+  padding: 20px 0
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+  .ngrateit
+    margin: 20px 0
+
+    .ngrateit-star
+      background-size: 40px

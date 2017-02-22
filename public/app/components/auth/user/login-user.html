@@ -1,19 +1,24 @@
-<section class="auth-box bg-auth-user">
-    <form ng-submit="loginUser(user)" class="auth-form">
-        <h2>Login User</h2>
-        <fieldset>
-            <legend>Email:</legend>
-            <input ng-model="user.email" class="auth-input" name="email" type="text" placeholder="example@mail.com">
-        </fieldset>
-        <fieldset>
-            <legend>Password:</legend>
-            <input ng-model="user.password" class="auth-input" name="password" type="password" placeholder="your secret password">
-        </fieldset>
-        <ul class="errors">
-            <li ng-repeat="error in response">{{error.msg}}</li>
-        </ul>
-        <fieldset>
-            <input class="btn btn-small btn-dark" type="submit" value="login">
-        </fieldset>
-    </form>   
+<header class="info-header">
+  <h2 class="title-medium">Login User</h2>
+</header>
+
+<section class="form-section">
+  <form ng-submit="loginUser(user)">
+    <fieldset>
+      <legend>Email:</legend>
+      <input ng-model="user.email" name="email" type="text" placeholder="example@mail.com">
+    </fieldset>
+    <fieldset>
+      <legend>Password:</legend>
+      <input ng-model="user.password" name="password" type="password" placeholder="your secret password">
+    </fieldset>
+    <ul class="errors">
+      <li ng-repeat="error in response">{{error.msg}}</li>
+    </ul>
+    <fieldset>
+      <input class="btn btn-long btn-main" type="submit" value="login">
+    </fieldset>
+    <p>or</p>
+    <a class="register-btn" ui-sref="register-user">Register new User</a>
+  </form>   
 </section>

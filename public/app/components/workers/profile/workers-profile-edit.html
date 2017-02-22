@@ -1,12 +1,12 @@
-<header class="profile-edit-header">
-  <h2>Edit {{worker.name}}</h2>
+<header class="info-header">
+  <h2 class="title-medium">Edit {{worker.name}}</h2>
 </header>
 
-<section class="profile-edit-box">
+<section class="form-section">
   <form ng-submit="editProfile(worker)">
     <fieldset>
       <legend>Name:</legend>
-      <input ng-model="worker.name" class="" name="email" type="text" placeholder="example@mail.com">
+      <input ng-model="worker.name" name="email" type="text" placeholder="example@mail.com">
     </fieldset>
     <fieldset>
       <legend>Description</legend>
@@ -19,7 +19,10 @@
     <ul class="errors">
       <li ng-repeat="error in response">{{error.msg}}</li>
     </ul>
-    <input class="btn btn-small btn-main" type="submit" value="Edit">
-    <a ui-sref="workers-profile({ workerId: current_user._id })" class="btn btn-small btn-dark" type="button" >Back</a>  
+    <fieldset>
+      <input class="btn btn-long btn-main" type="submit" value="Edit">
+      <a ui-sref="workers-profile({ workerId: current_user._id })" class="btn btn-long btn-invert" >Back</a>        
+    </fieldset>
+
   </form>
 </section>

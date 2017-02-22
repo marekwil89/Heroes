@@ -1,31 +1,34 @@
-<section class="auth-box bg-auth-worker">
-    <form ng-submit="registerWorker(worker)" class="auth-form">
-        <h2>Register Hero</h2>
-        <fieldset>
-            <legend>Name:</legend>
-            <input ng-model="worker.name" class="auth-input" name="name" type="text" placeholder="your name">
-        </fieldset>
-        <fieldset>
-            <legend>Description</legend>
-            <textarea ng-model="worker.descr" class="auth-input" name="description" type="text" placeholder="your text"></textarea>
-        </fieldset>
-        <fieldset>
-            <legend>Email:</legend>
-            <input ng-model="worker.email" class="auth-input" name="email" type="text" placeholder="example@mail.com">
-        </fieldset>
-        <fieldset>
-            <legend>Password:</legend>
-            <input ng-model="worker.password" class="auth-input" name="password" type="password" placeholder="your secret password">
-        </fieldset>
-        <fieldset>
-            <legend>Repeat password:</legend>
-            <input ng-model="worker.repeatPass" class="auth-input" name="password" type="password" placeholder="repeat your secret password">
-        </fieldset>
-        <ul class="errors">
-            <li ng-repeat="error in response">{{error.msg}}</li>
-        </ul>
-        <fieldset>
-            <input class="btn btn-small btn-main" type="submit" value="Register">
-        </fieldset>
-    </form>   
+<header class="info-header">
+  <h2 class="title-medium">Register Hero</h2>
+</header>
+
+<section class="form-section">
+  <form ng-submit="registerWorker(worker)">
+    <fieldset>
+      <legend>Name:</legend>
+      <input ng-model="worker.name" name="name" type="text" placeholder="your name">
+    </fieldset>
+    <fieldset>
+      <legend>Description</legend>
+      <textarea ng-model="worker.descr" name="description" type="text" placeholder="your text"></textarea>
+    </fieldset>
+    <fieldset>
+      <legend>Email:</legend>
+      <input ng-model="worker.email" name="email" type="text" placeholder="example@mail.com">
+    </fieldset>
+    <fieldset>
+      <legend>Password:</legend>
+      <input ng-model="worker.password" name="password" type="password" placeholder="your secret password">
+    </fieldset>
+    <fieldset>
+      <legend>Repeat password:</legend>
+      <input ng-model="worker.repeatPass" name="password" type="password" placeholder="repeat your secret password">
+    </fieldset>
+    <ul class="errors">
+      <li ng-repeat="error in response">{{error.msg}}</li>
+    </ul>
+    <fieldset>
+      <input class="btn btn-long btn-main" type="submit" value="Register">
+    </fieldset>
+  </form>   
 </section>

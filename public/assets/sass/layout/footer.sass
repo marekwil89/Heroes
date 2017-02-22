@@ -1,0 +1,35 @@
+footer
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  background-color: lighten($black, 10%)
+  font-family: 'Oswald', sans-serif
+  letter-spacing: 1.5px
+
+  .footer-info
+    padding: 40px 0
+    min-width: 600px
+
+    p
+      font-size: 1rem
+      margin: 5px 0
+      color: $white
+
+  .copyright
+    background-color: $black
+    padding: 30px
+    width: 100%
+    font-size: 1rem
+    text-align: center
+    color: $white
+
+    i
+      color: $white
+      font-size: 1rem
+
+@media (max-width: 620px)
+  footer
+    .footer-info
+      text-align: center
+      min-width: 100%

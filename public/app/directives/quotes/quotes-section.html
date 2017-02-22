@@ -1,0 +1,16 @@
+<section class="quotes-section">
+  <div class="quotes-box"> 
+    <h2 num="04" class="title-big">Heroes are Saying</h2> 
+    <blockquote  ng-repeat="quote in quotes" ng-show="currentTab === $index">
+      <p class="quote">{{quote.text}}</p>
+      <div class="line center"></div>
+      <cite>{{quote.author}}</cite>
+    </blockquote> 
+    <ul class="tabs" > 
+      <li ng-class="{ active: currentTab == $index }" ng-repeat="quote in quotes"><a class="tab" ng-click="selectTab($index)">{{$index+1}}</a></li> 
+    </ul> 
+  </div> 
+  <figure class="quote-img" ng-repeat="quote in quotes" ng-show="currentTab === $index"> 
+    <img ng-src="/assets/images/{{quote.author}}.jpg" alt="" /> 
+  </figure>
+</section>
