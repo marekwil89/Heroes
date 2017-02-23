@@ -147,6 +147,8 @@ nav {
     color: #ef0d33;
     line-height: 60px;
     font-size: 2rem; }
+    nav .logo span {
+      color: #111517; }
   nav .fa-bars {
     margin-right: 40px;
     line-height: 60px;
@@ -163,7 +165,7 @@ nav {
     -webkit-transform: skew(-50deg);
         -ms-transform: skew(-50deg);
             transform: skew(-50deg);
-    background-color: #111517;
+    background-color: rgba(17, 21, 23, 0.98);
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -482,7 +484,7 @@ input, textarea {
   top: 0;
   left: 0; }
   .overlay.black {
-    background: rgba(17, 21, 23, 0.95); }
+    background: rgba(17, 21, 23, 0.7); }
 
 .title-big {
   text-align: center;
@@ -689,7 +691,7 @@ input, textarea {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  min-height: 100vh; }
+  min-height: 94vh; }
   .main-page-header .main-box {
     width: 1200px;
     z-index: 50; }
